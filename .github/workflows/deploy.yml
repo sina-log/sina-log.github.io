@@ -16,7 +16,12 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      # 2. JBake를 실행하여 정적 사이트를 빌드합니다.
+      # 2. Create output directory for JBake
+      #    Docker 컨테이너 내부의 사용자가 볼륨 마운트된 디렉토리에 쓸 수 있도록 권한 문제를 해결합니다.
+      - name: Create and permit output directory
+        run: mkdir -p ./output && chmod 777 ./output
+
+      # 3. JBake를 실행하여 정적 사이트를 빌드합니다.
       #    - jbake/jbake Docker 이미지를 사용합니다.
       #    - 현재 워크스페이스(${{ github.workspace }})를 컨테이너의 /source 디렉토리에 마운트합니다.
       #    - /source 디렉토리에서 빌드를 실행하고, 결과물은 /source/output에 생성됩니다.
@@ -27,7 +32,7 @@ jobs:
             jbake/jbake \
             -b /source
 
-      # 3. 빌드된 사이트를 'main' 브랜치에 배포합니다.
+      # 4. 빌드된 사이트를 'main' 브랜치에 배포합니다.
       #    - peaceiris/actions-gh-pages 액션을 사용합니다.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
