@@ -3,18 +3,22 @@
 	<#include "menu.ftl">
 
 	<div class="page-header">
-		<h1>Blog</h1>
+		<h1>최근 글</h1>
+		<p class="lead">${config.site_description}</p>
 	</div>
 	<#list posts as post>
   		<#if (post.status == "published")>
-  			<a href="${post.uri}"><h1>${post.title}</h1></a>
-  			<p>${post.date?string("dd MMMM yyyy")}</p>
-  			<p>${post.body}</p>
+  			<div class="post-preview">
+  				<h2><a href="${post.uri}" class="post-title">${post.title}</a></h2>
+  				<p class="post-date">${post.date?string("yyyy년 MM월 dd일")}</p>
+  				<div class="post-content">
+  					${post.body}
+  				</div>
+  				<hr>
+  			</div>
   		</#if>
   	</#list>
 	
-	<hr />
-	
-	<p>Older posts are available in the <a href="${content.rootpath}${config.archive_file}">archive</a>.</p>
+	<p>더 많은 글은 <a href="${content.rootpath}${config.archive_file}">아카이브</a>에서 확인하실 수 있습니다.</p>
 
 <#include "footer.ftl">

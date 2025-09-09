@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8"/>
-    <title><#if (content.title)??>${content.title}<#else>JBake</#if></title>
+    <title><#if (content.title)??>${content.title} - ${config.site_title}<#else>${config.site_title}</#if></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="${config.site_description}">
+    <meta name="author" content="${config.site_author}">
+    <meta name="keywords" content="블로그, 개발, James">
     <meta name="generator" content="JBake">
 
     <!-- Le styles -->
