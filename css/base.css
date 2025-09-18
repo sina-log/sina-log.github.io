@@ -1,0 +1,104 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+#footer {
+  background-color: #f5f5f5;
+  padding: 0;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+  padding-top: 60px;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+/* 한글 폰트 및 개선된 스타일 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.post-title {
+  margin-bottom: 10px;
+}
+
+.post-date {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.post-content {
+  margin-top: 20px;
+}
+
+/* 코드 블록 스타일 개선 */
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+code {
+  background-color: #f8f8f8;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 85%;
+}
+
+/* 반응형 개선 */
+@media (max-width: 768px) {
+  #wrap > .container {
+    padding-top: 70px;
+  }
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8"/>
+    <title>James의 개인 블로그</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="개발과 일상을 기록하는 공간입니다">
+    <meta name="author" content="James">
+    <meta name="keywords" content="블로그, 개발, James">
+    <meta name="generator" content="JBake">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/asciidoctor.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body onload="prettyPrint()">
+    <div id="wrap">
+	
+	<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">James의 개인 블로그</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="archive.html">아카이브</a></li>
+            <li><a href="feed.xml">RSS</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container">
+	<div class="page-header">
+		<h1>최근 글</h1>
+		<p class="lead">개발과 일상을 기록하는 공간입니다</p>
+	</div>
+  			<div class="post-preview">
+  				<h2><a href="my-first-post.html" class="post-title">나의 첫 블로그 글</a></h2>
+  				<p class="post-date">2026년 09월 09일</p>
+  				<div class="post-content">
+  					<h1>JBake로 첫 블로그 글 작성하기</h1>
+<p>안녕하세요! JBake를 사용해서 만든 제 첫 블로그 글입니다.</p>
+<p>정적 사이트 생성기를 이용하니 정말 편리하네요.</p>
+<ul>
+<li>Markdown으로 쉽게 글을 쓸 수 있습니다.</li>
+<li>빌드하면 HTML 파일이 자동으로 생성됩니다.</li>
+</ul>
+<pre><code class="language-java">System.out.println(&quot;Hello, JBake!&quot;);
+</code></pre>
+
+  				</div>
+  				<hr>
+  			</div>
+  			<div class="post-preview">
+  				<h2><a href="ds-and-algo-summary.html" class="post-title">자료구조와 알고리즘, 코딩 테스트를 위한 핵심 정리 (Python & Java)</a></h2>
+  				<p class="post-date">2023년 10월 27일</p>
+  				<div class="post-content">
+  					<p>코딩 테스트를 준비하다 보면 방대한 양의 자료구조와 알고리즘 개념 때문에 막막할 때가 많습니다. 특히 여러 프로그래밍 언어를 함께 사용한다면, 각 언어의 미묘한 차이점 때문에 헷갈리기 쉽습니다.</p>
+<p>이 포스트는 코딩 테스트에 자주 등장하는 핵심적인 자료구조와 알고리즘을 <strong>Python</strong>과 <strong>Java</strong> 코드로 한눈에 비교하며 정리한 치트 시트입니다. 이 한 페이지로 흩어져 있던 지식을 체계적으로 정리하고, 시험 직전에 빠르게 복습하는 데 활용해 보세요.</p>
+<h2>1. 핵심 자료구조</h2>
+<p>코딩 테스트의 기본은 주어진 문제를 가장 효율적으로 해결할 수 있는 자료구조를 선택하는 것입니다.</p>
+<h3>1) 딕셔너리/HashMap &amp; 세트/HashSet</h3>
+<p>키-값 쌍을 저장하거나 중복 없는 원소 집합을 다룰 때 사용합니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python"># 딕셔너리
+char_counts = {}
+text = &quot;hello world&quot;
+for c in text:
+    char_counts[c] = char_counts.get(c, 0) + 1
+
+# defaultdict 사용
+from collections import defaultdict
+char_counts = defaultdict(int)
+for c in text:
+    char_counts[c] += 1
+
+# 세트
+numbers = [1, 2, 2, 3, 3, 3, 4]
+unique_numbers = set(numbers)  # {1, 2, 3, 4}
+
+# 집합 연산
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+print(set_a &amp; set_b)  # 교집합: {3, 4}
+print(set_a | set_b)  # 합집합: {1, 2, 3, 4, 5, 6}
+print(set_a - set_b)  # 차집합: {1, 2}
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">// HashMap
+Map&lt;Character, Integer&gt; charCount = new HashMap&lt;&gt;();
+String text = &quot;hello world&quot;;
+for (char c : text.toCharArray()) {
+    charCount.put(c, charCount.getOrDefault(c, 0) + 1);
+}
+
+// HashSet
+Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 2, 3, 3, 3, 4));
+// 자동으로 중복 제거됨: [1, 2, 3, 4]
+
+// 집합 연산
+Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3, 4));
+Set&lt;Integer&gt; set2 = new HashSet&lt;&gt;(Arrays.asList(3, 4, 5, 6));
+
+// 교집합
+Set&lt;Integer&gt; intersection = new HashSet&lt;&gt;(set1);
+intersection.retainAll(set2);  // {3, 4}
+
+// 합집합
+Set&lt;Integer&gt; union = new HashSet&lt;&gt;(set1);
+union.addAll(set2);  // {1, 2, 3, 4, 5, 6}
+
+// 차집합
+Set&lt;Integer&gt; difference = new HashSet&lt;&gt;(set1);
+difference.removeAll(set2);  // {1, 2}
+</code></pre>
+<h3>2) 리스트/ArrayList</h3>
+<p>순서가 있는 원소의 컬렉션을 다룰 때 가장 기본적으로 사용됩니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python"># 리스트
+lst = []
+lst.append(1)
+lst.insert(0, 2)
+lst.pop()
+lst.pop(0)
+
+# 리스트 컴프리헨션
+squares = [x**2 for x in range(10)]
+
+# 정렬
+arr = [3, 1, 4, 1, 5]
+arr.sort()  # 원본 정렬
+sorted_arr = sorted(arr)  # 새 리스트 반환
+
+# 커스텀 정렬
+students = [(&quot;Alice&quot;, 90), (&quot;Bob&quot;, 80)]
+students.sort(key=lambda x: (-x[1], x[0]))
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">// ArrayList
+List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+list.add(1);
+list.add(0, 2);
+list.remove(list.size() - 1);
+list.remove(0);
+
+// 정렬
+Collections.sort(list);
+Collections.sort(list, Collections.reverseOrder());
+
+// 커스텀 정렬
+List&lt;int[]&gt; students = new ArrayList&lt;&gt;();
+students.sort((a, b) -&gt; {
+    if (a[1] != b[1]) return b[1] - a[1];
+    return a[0] - b[0];
+});
+</code></pre>
+<h3>3) 스택/Stack &amp; 큐/Queue</h3>
+<p>후입선출(LIFO)과 선입선출(FIFO) 로직을 구현할 때 사용합니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python"># 스택 (리스트 사용)
+stack = []
+stack.append(1)
+print(stack.pop())
+
+# 큐 (deque 사용)
+from collections import deque
+queue = deque()
+queue.append(1)
+print(queue.popleft())
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">// Stack
+Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();
+stack.push(1);
+System.out.println(stack.pop());
+
+// Queue
+Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();
+queue.offer(1);
+System.out.println(queue.poll());
+</code></pre>
+<h3>4) 우선순위 큐/PriorityQueue</h3>
+<p>가장 크거나 작은 원소를 빠르게 찾아야 할 때 유용합니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python">import heapq
+
+# 최소 힙
+min_heap = []
+heapq.heappush(min_heap, 4)
+heapq.heappush(min_heap, 1)
+print(heapq.heappop(min_heap))  # 1
+
+# 최대 힙 (음수로 변환)
+max_heap = []
+heapq.heappush(max_heap, -4)
+heapq.heappush(max_heap, -1)
+print(-heapq.heappop(max_heap)) # 7
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">// 최소 힙
+PriorityQueue&lt;Integer&gt; minHeap = new PriorityQueue&lt;&gt;();
+minHeap.offer(4);
+minHeap.offer(1);
+System.out.println(minHeap.poll());  // 1
+
+// 최대 힙
+PriorityQueue&lt;Integer&gt; maxHeap = new PriorityQueue&lt;&gt;(Collections.reverseOrder());
+maxHeap.offer(4);
+maxHeap.offer(1);
+maxHeap.offer(7);
+System.out.println(maxHeap.poll());  // 7
+</code></pre>
+<h2>2. 핵심 알고리즘</h2>
+<p>자료구조를 선택했다면, 이제 문제를 풀기 위한 알고리즘을 적용할 차례입니다.</p>
+<h3>1) 이진 탐색 (Binary Search)</h3>
+<p>정렬된 배열에서 특정 값을 빠르게 찾을 때 사용합니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python">def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left &lt;= right:
+        mid = (left + right) // 2
+        if arr[mid] == target: return mid
+        elif arr[mid] &lt; target: left = mid + 1
+        else: right = mid - 1
+    return -1
+
+# bisect 모듈
+import bisect
+arr = [1, 2, 4, 4, 5]
+print(bisect.bisect_left(arr, 4))   # 2
+print(bisect.bisect_right(arr, 4))  # 4
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">public static int binarySearch(int[] arr, int target) {
+    int left = 0, right = arr.length - 1;
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] &lt; target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+
+// Arrays.binarySearch() 활용
+int index = Arrays.binarySearch(new int[]{1, 2, 4, 4, 5}, 4);
+</code></pre>
+<h3>2) 깊이 우선 탐색 (DFS) &amp; 너비 우선 탐색 (BFS)</h3>
+<p>그래프의 모든 노드를 방문할 때 사용하는 대표적인 두 가지 방법입니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python"># DFS (재귀)
+def dfs_recursive(node, graph, visited):
+    visited.add(node)
+    for neighbor in graph.get(node, []):
+        if neighbor not in visited:
+            dfs_recursive(neighbor, graph, visited)
+
+# BFS
+from collections import deque
+def bfs(start, graph):
+    visited = {start}
+    queue = deque([start])
+    while queue:
+        node = queue.popleft()
+        for neighbor in graph.get(node, []):
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">// DFS (재귀)
+public void dfsRecursive(int node, Map&lt;Integer, List&lt;Integer&gt;&gt; graph, Set&lt;Integer&gt; visited) {
+    visited.add(node);
+    for (int neighbor : graph.getOrDefault(node, new ArrayList&lt;&gt;())) {
+        if (!visited.contains(neighbor)) {
+            dfsRecursive(neighbor, graph, visited);
+        }
+    }
+}
+
+// BFS
+public void bfs(int start, Map&lt;Integer, List&lt;Integer&gt;&gt; graph) {
+    Set&lt;Integer&gt; visited = new HashSet&lt;&gt;();
+    Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();
+    visited.add(start);
+    queue.offer(start);
+    while (!queue.isEmpty()) {
+        int node = queue.poll();
+        for (int neighbor : graph.getOrDefault(node, new ArrayList&lt;&gt;())) {
+            if (!visited.contains(neighbor)) {
+                visited.add(neighbor);
+                queue.offer(neighbor);
+            }
+        }
+    }
+}
+</code></pre>
+<h3>3) 동적 계획법 (Dynamic Programming)</h3>
+<p>복잡한 문제를 작은 하위 문제로 나누어 해결하는 기법입니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python"># Top-Down (메모이제이션)
+memo = {}
+def fib_memo(n):
+    if n &lt;= 1: return n
+    if n in memo: return memo[n]
+    memo[n] = fib_memo(n-1) + fib_memo(n-2)
+    return memo[n]
+
+# Bottom-Up
+def fib_tab(n):
+    dp = [0, 1] + [0] * (n - 1)
+    for i in range(2, n + 1):
+        dp[i] = dp[i-1] + dp[i-2]
+    return dp[n]
+
+# @lru_cache 활용
+from functools import lru_cache
+@lru_cache(maxsize=None)
+def fib_lru(n):
+    if n &lt;= 1: return n
+    return fib_lru(n-1) + fib_lru(n-2)
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">// Top-Down (메모이제이션)
+private Map&lt;Integer, Integer&gt; memo = new HashMap&lt;&gt;();
+public int fibMemo(int n) {
+    if (n &lt;= 1) return n;
+    if (memo.containsKey(n)) return memo.get(n);
+    int result = fibMemo(n - 1) + fibMemo(n - 2);
+    memo.put(n, result);
+    return result;
+}
+
+// Bottom-Up
+public static int fibTab(int n) {
+    if (n &lt;= 1) return n;
+    int[] dp = new int[n + 1];
+    dp[1] = 1;
+    for (int i = 2; i &lt;= n; i++) {
+        dp[i] = dp[i - 1] + dp[i - 2];
+    }
+    return dp[n];
+}
+</code></pre>
+<h2>3. 기타 유용한 팁</h2>
+<p>알고리즘 외에도 코딩 테스트에 유용한 자잘한 팁들입니다.</p>
+<h3>1) 입출력 최적화</h3>
+<p>많은 양의 입력을 처리해야 할 때 시간 초과를 방지할 수 있습니다.</p>
+<h4>Python</h4>
+<pre><code class="language-python">import sys
+input = sys.stdin.readline
+n = int(input())
+arr = list(map(int, input().split()))
+</code></pre>
+<h4>Java</h4>
+<pre><code class="language-java">import java.io.*;
+import java.util.*;
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+StringTokenizer st = new StringTokenizer(br.readLine());
+int n = Integer.parseInt(st.nextToken());
+</code></pre>
+<h3>2) 방향 배열</h3>
+<p>2D 격자 탐색 문제에서 상하좌우 또는 8방향 이동을 간결하게 처리할 수 있습니다.</p>
+<h4>Python &amp; Java 공통</h4>
+<pre><code class="language-python"># Python
+dx = [-1, 1, 0, 0]  # 상하좌우
+dy = [0, 0, -1, 1]
+
+for i in range(4):
+    nx, ny = x + dx[i], y + dy[i]
+    # ... 범위 체크 및 로직 ...
+</code></pre>
+<pre><code class="language-java">// Java
+int[] dx = {-1, 1, 0, 0}; // 상하좌우
+int[] dy = {0, 0, -1, 1};
+
+for (int i = 0; i &lt; 4; i++) {
+    int nx = x + dx[i];
+    int ny = y + dy[i];
+    // ... 범위 체크 및 로직 ...
+}
+</code></pre>
+<h2>마무리</h2>
+<p>이 포스트에서 다룬 내용들은 코딩 테스트의 시작점입니다. 각 자료구조와 알고리즘의 시간 복잡도와 공간 복잡도를 이해하고, 다양한 문제에 적용하는 연습을 꾸준히 하는 것이 중요합니다.</p>
+<p>행운을 빕니다!</p>
+
+  				</div>
+  				<hr>
+  			</div>
+	
+	<p>더 많은 글은 <a href="archive.html">아카이브</a>에서 확인하실 수 있습니다.</p>
+
+		</div>
+		<div id="push"></div>
+    </div>
+    
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Copyright 2025 James. All rights reserved. | <a href="http://jbake.org">JBake</a>로 제작</p>
+      </div>
+    </div>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+    
+  </body>
+</html>
