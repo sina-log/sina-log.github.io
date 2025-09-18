@@ -11,6 +11,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    # 'main' 브랜치에 푸시할 수 있도록 콘텐츠 쓰기 권한을 부여합니다.
+    permissions:
+      contents: write
     steps:
       # 1. 'source' 브랜치의 코드를 체크아웃합니다.
       - name: Checkout source code
