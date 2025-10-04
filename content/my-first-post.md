@@ -1,5 +1,5 @@
 title=나의 첫 블로그 글
-date=2026-09-09
+date=2024-09-09
 type=post
 tags=blog, jbake
 status=published
