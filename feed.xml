@@ -6,31 +6,13 @@
     <atom:link href="https://sina-log.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sat, 4 Oct 2025 09:48:28 +0000</pubDate>
-    <lastBuildDate>Sat, 4 Oct 2025 09:48:28 +0000</lastBuildDate>
+    <pubDate>Sat, 4 Oct 2025 14:07:02 +0000</pubDate>
+    <lastBuildDate>Sat, 4 Oct 2025 14:07:02 +0000</lastBuildDate>
 
-    <item>
-      <title>나의 첫 블로그 글</title>
-      <link>https://sina-log.github.io/my-first-post.html</link>
-      <pubDate>Mon, 9 Sep 2024 00:00:00 +0000</pubDate>
-      <guid isPermaLink="false">my-first-post.html</guid>
-      	<description>
-	&lt;h1&gt;JBake로 첫 블로그 글 작성하기&lt;/h1&gt;
-&lt;p&gt;안녕하세요! JBake를 사용해서 만든 제 첫 블로그 글입니다.&lt;/p&gt;
-&lt;p&gt;정적 사이트 생성기를 이용하니 정말 편리하네요.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Markdown으로 쉽게 글을 쓸 수 있습니다.&lt;/li&gt;
-&lt;li&gt;빌드하면 HTML 파일이 자동으로 생성됩니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;System.out.println(&amp;quot;Hello, JBake!&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-
-	</description>
-    </item>
     <item>
       <title>자료구조와 알고리즘, 코딩 테스트를 위한 핵심 정리 (Python &amp; Java)</title>
       <link>https://sina-log.github.io/data-structures/ds-and-algo-summary.html</link>
-      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 4 Oct 2024 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">data-structures/ds-and-algo-summary.html</guid>
       	<description>
 	&lt;p&gt;코딩 테스트를 준비하다 보면 방대한 양의 자료구조와 알고리즘 개념 때문에 막막할 때가 많습니다. 특히 여러 프로그래밍 언어를 함께 사용한다면, 각 언어의 미묘한 차이점 때문에 헷갈리기 쉽습니다.&lt;/p&gt;
@@ -363,6 +345,24 @@ for (int i = 0; i &amp;lt; 4; i++) {
 &lt;h2&gt;마무리&lt;/h2&gt;
 &lt;p&gt;이 포스트에서 다룬 내용들은 코딩 테스트의 시작점입니다. 각 자료구조와 알고리즘의 시간 복잡도와 공간 복잡도를 이해하고, 다양한 문제에 적용하는 연습을 꾸준히 하는 것이 중요합니다.&lt;/p&gt;
 &lt;p&gt;행운을 빕니다!&lt;/p&gt;
+
+	</description>
+    </item>
+    <item>
+      <title>나의 첫 블로그 글</title>
+      <link>https://sina-log.github.io/my-first-post.html</link>
+      <pubDate>Mon, 9 Sep 2024 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">my-first-post.html</guid>
+      	<description>
+	&lt;h1&gt;JBake로 첫 블로그 글 작성하기&lt;/h1&gt;
+&lt;p&gt;안녕하세요! JBake를 사용해서 만든 제 첫 블로그 글입니다.&lt;/p&gt;
+&lt;p&gt;정적 사이트 생성기를 이용하니 정말 편리하네요.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Markdown으로 쉽게 글을 쓸 수 있습니다.&lt;/li&gt;
+&lt;li&gt;빌드하면 HTML 파일이 자동으로 생성됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;System.out.println(&amp;quot;Hello, JBake!&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
 
 	</description>
     </item>
