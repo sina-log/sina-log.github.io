@@ -6,7 +6,7 @@
 		<h1>최근 글</h1>
 		<p class="lead">${config.site_description}</p>
 	</div>
-	<#list posts as post>
+	<#list posts?sort_by("date")?reverse as post>
   		<#if (post.status == "published")>
   			<div class="post-preview">
   				<h2><a href="${post.uri}" class="post-title">${post.title}</a></h2>
