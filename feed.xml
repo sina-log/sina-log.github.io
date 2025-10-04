@@ -6,13 +6,13 @@
     <atom:link href="https://sina-log.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Sat, 4 Oct 2025 07:43:24 +0000</pubDate>
-    <lastBuildDate>Sat, 4 Oct 2025 07:43:24 +0000</lastBuildDate>
+    <pubDate>Sat, 4 Oct 2025 09:17:55 +0000</pubDate>
+    <lastBuildDate>Sat, 4 Oct 2025 09:17:55 +0000</lastBuildDate>
 
     <item>
       <title>나의 첫 블로그 글</title>
       <link>https://sina-log.github.io/my-first-post.html</link>
-      <pubDate>Wed, 9 Sep 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 9 Sep 2024 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">my-first-post.html</guid>
       	<description>
 	&lt;h1&gt;JBake로 첫 블로그 글 작성하기&lt;/h1&gt;
